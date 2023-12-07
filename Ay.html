@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Happy Birthday Ayash! 🎂</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #3498db, #2c3e50); /* Vibrant blue background */
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        #birthday-container {
+            text-align: center;
+            position: relative;
+        }
+        #birthday-text {
+            font-size: 36px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        #gift-box {
+            width: 150px;
+            height: 150px;
+            background: url('https://image-url/gift-box.png') center/cover;
+            position: relative;
+            overflow: hidden;
+        }
+        #gift-box-inner {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #happy-birthday {
+            font-size: 24px;
+            display: none;
+            animation: slideIn 1s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        #confetti {
+            background-image: url('https://www.transparenttextures.com/patterns/giftly.png');
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            animation: float 2s infinite linear;
+        }
+        @keyframes float {
+            from { transform: translate(0, -100vh); }
+            to { transform: translate(0, 100vh); }
+        }
+    </style>
+</head>
+<body>
+    <div id="confetti"></div>
+    <div id="birthday-container">
+        <div id="gift-box">
+            <div id="gift-box-inner">
+                <div id="birthday-text" onclick="revealMessage()">🎁 Click to open 🎁</div>
+                <div id="happy-birthday">🎉 Happy Birthday Ayash! 🎂</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('birthday-text').style.display = 'none';
+            document.getElementById('happy-birthday').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
